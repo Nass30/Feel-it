@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/24 14:23:28 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/09/24 14:34:21 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/07/23 17:50:09 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/09/24 14:49:29 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "fillit.h"
+#ifndef FILLIT_H
+# define FILLIT_H
+# define USAGE "USAGE : ./fillit tetriminos_file"
 
-int main(int ac, char **av)
+typedef struct  s_tetriminos
 {
-    (void)av;
-    if (ac != 2)
-    {
-        ft_putendl(USAGE);
-        return (1);
-    }
-    return 0;
-}
+	int         tab[4];
+    char        name;
+    t_tetriminos    *next;
+}               t_tetriminos;
+
+#endif
